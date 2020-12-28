@@ -3,7 +3,7 @@ services:
   - docker
   
 before_install:
-  - docker build -t samchegz/miniapp -f Dockerfile.dev .
+  - docker build -t miniapp:1.0 -f Dockerfile.dev .
   
 script:
-  - docker run samchegz/miniapp npm run test -- --coverage
+  - docker run miniapp:1.0 npm run test -- --coverage
